@@ -6,9 +6,9 @@ class TicTacToeGame:
     def display_board(self):
         board_str = ""
         for i in range(9):
-            board_str += self.board[i] + ('|' if (i + 1) % 3 != 0 else '\n')
+            board_str += ' ' + self.board[i] + ' ' + ('|' if (i + 1) % 3 != 0 else '\n')
             if (i + 1) % 3 == 0 and i != 8:
-                board_str += '-----\n'
+                board_str += '-----------\n'
         return board_str
 
     def make_move(self, position):
